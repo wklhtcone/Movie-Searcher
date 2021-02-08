@@ -153,7 +153,7 @@ let url = "https://www.omdbapi.com/?apikey=3aea79ac&s=\(encodedText)&type=movie"
 - 不论是否获取成功，`URLResponse`不为nil，存着HTTP响应报文中的数据
 3. 获取data后将其转为结构体
 - `JSONDecoder().decode()`可能失败`throw`异常，因此放在`do{} catch{}`中，并`try`
-- 若转换失败，`revData`就成了`nil`，因此声明为可选型
+- 若转换失败，`result`就成了`nil`，因此声明为可选型
 
 ```swift
 guard let data = data, error == nil else{
