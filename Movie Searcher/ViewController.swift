@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return true
     }
     func serachMovies() {
-        
+        field.resignFirstResponder()
         guard let searchText = field.text, !searchText.isEmpty else {
             return
         }
